@@ -1,0 +1,50 @@
+TREEHOUSE LIFE “WISH-LIST WHISPERER”
+Product Brief
+
+Overview
+The Wish-List Whisperer is a premium conversational web app designed for Treehouse Life Ltd. It guides High-Net-Worth (HNW) and Ultra-High-Net-Worth (UHNW) clients from an initial “wish-list” of ideas — captured via text or voice — to a personalised, founder-voiced project concept. The app then facilitates booking consultations, arranging WhatsApp video calls, and delivering a bespoke online project brochure, creating a seamless journey from inspiration to engagement.
+
+Target User
+HNW and UHNW clients with gardens, estates, or woodland properties.
+Individuals and families who value craftsmanship, privacy, and emotional connection.
+Time-poor but inspired, seeking effortless, beautiful digital experiences that feel personally guided by Paul Cameron, Founder of Treehouse Life Ltd.
+
+Problem
+Clients know how they want to feel, not what to build. They struggle to visualise ideas and often lose momentum before engaging professionally. Treehouse Life requires a scalable yet personal solution to:
+Capture early-stage inspiration.
+Preserve the founder’s voice and brand authenticity.
+Convert client dreams into actionable consultation opportunities efficiently.
+
+Solution
+A WhatsApp-style conversational web app that:
+Captures client wish-lists via text or voice.
+Uses GPT-5 trained on Paul Cameron’s Notion library to generate bespoke project concepts.
+Mirrors client language to foster emotional ownership and trust.
+Guides clients to:
+Book a consultation via Motion live calendar.
+Receive a personalised online brochure via Qwilr.
+Connect via WhatsApp Business video. All interactions maintain founder-led tone, warmth, and luxury simplicity.
+
+Success Metrics
+≥ 60% of visitors start chat → ≥ 80% complete.
+≥ 35% conversion to booking or brochure request.
+≥ 50% reduction in pre-consultation administrative workload.
+≥ 9/10 client satisfaction rating.
+
+Design Style
+Aesthetic: Nature-inspired minimalism; calm, emotional tone.
+Primary Colours: #7f9a59, #a3be41, #bf6c2b, #394751
+Secondary Colours: #396235, #b7d3ae (use tonal variations for hierarchy).
+Typography: Headings — Jubilat; Body — Raleway.
+UI Elements: WhatsApp-style chat bubbles, subtle animations (floating leaves, gentle message delays), high whitespace, rounded corners.
+Tone: Every response reflects the client’s words; conversational pacing conveys founder presence, empathy, and imagination.
+
+Key Integrations
+GPT-5 + Notion API — personalised concept generation.
+Motion API — live consultation scheduling.
+Qwilr API — personalised project brochures.
+WhatsApp Business — direct video communication.
+Zapier / Make — automated delivery of transcripts and brochure links to office.
+
+Experience Keywords
+Luxury simplicity, emotional ownership, natural conversation, founder presence, handcrafted inspiration.

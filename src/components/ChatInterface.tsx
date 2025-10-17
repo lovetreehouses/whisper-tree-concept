@@ -61,16 +61,55 @@ const ChatInterface = ({ onConceptGenerated }: ChatInterfaceProps) => {
     };
 
     setMessages((prev) => [...prev, userMessage]);
+    const userInput = input;
     setInput("");
     setIsProcessing(true);
 
-    // Simulate AI processing
-    setTimeout(() => {
-      const concept = `Based on your wish for "${input}", I envision a beautiful space that combines natural elegance with thoughtful design. This concept embraces the harmony between your dreams and the environment around you.`;
-      
+    try {
+      // Call backend API to generate concept with Notion integration
+      const response = await fetch('http://localhost:3001/api/concept/generate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userInput,
+          messages: messages,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to generate concept');
+      }
+
+      const data = await response.json();
+
+      if (data.success) {
+        setIsProcessing(false);
+        onConceptGenerated(data.concept);
+
+        // Optionally show sources used
+        if (data.sources && data.sources.length > 0) {
+          console.log('Sources used:', data.sources);
+        }
+      } else {
+        throw new Error(data.error || 'Failed to generate concept');
+      }
+    } catch (error) {
+      console.error('Error generating concept:', error);
+
+      // Fallback to simple response if backend is unavailable
+      const fallbackConcept = `Based on your wish for "${userInput}", I envision a beautiful space that combines natural elegance with thoughtful design. This concept embraces the harmony between your dreams and the environment around you.`;
+
       setIsProcessing(false);
-      onConceptGenerated(concept);
-    }, 3000);
+      onConceptGenerated(fallbackConcept);
+
+      toast({
+        title: "Limited functionality",
+        description: "Using basic concept generation. Connect Notion API for enhanced responses.",
+        variant: "default",
+      });
+    }
   };
 
   const handleVoiceNote = () => {
